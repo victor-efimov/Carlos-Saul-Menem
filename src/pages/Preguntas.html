@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia de Preguntas</title>
+    <link rel="stylesheet" href="../css/Religion.css">
+    <style>
+        .opciones-container {
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn-opcion {
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            border: 1px solid #2d3748;
+            padding: 15px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+        .btn-opcion:hover {
+            border-color: var(--color-acento);
+            background-color: #232a37;
+        }
+        .btn-opcion.correcta {
+            background-color: #1b4332 !important;
+            border-color: #52b788 !important;
+            color: #d8f3dc;
+        }
+        .btn-opcion.incorrecta {
+            background-color: #4c1d1d !important;
+            border-color: #e63946 !important;
+            color: #ffe3e3;
+        }
+        #resultado-final {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--color-secundario);
+            border: 1px solid var(--color-acento);
+            border-radius: 4px;
+            text-align: center;
+            display: none;
+        }
+        #resultado-final h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-acento);
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+    <a href="Index.html">Inicio</a>
+    <a href="Origen.html">Origen</a>
+    <a href="Religion.html">Religion</a>
+    <a href="">Carrera</a>
+    <a href="">Mandatos</a>
+    <a href="">Medidas y Efectos</a>
+    <a href="Preguntas.html">Preguntas</a>
+        </nav>
+    </div>
+
+    <h1>Trivia Interactiva</h1>
+    <h4>Demostrá lo aprendido respondiendo estas 3 preguntas sobre la vida y reformas de Carlos Menem.</h4>
+
+    <h2>1. Según la Constitución de 1853, ¿cuál era el requisito para ser Presidente que obligó a Menem a convertirse al catolicismo?</h2>
+    <div class="opciones-container" data-pregunta="1">
+        <button class="btn-opcion" data-correcta="false">a) Haber nacido en la ciudad de Buenos Aires.</button>
+        <button class="btn-opcion" data-correcta="false">b) Ser militar de carrera o tener rango de oficial.</button>
+        <button class="btn-opcion" data-correcta="false">c) Ser abogado graduado con honores.</button>
+        <button class="btn-opcion" data-correcta="true">d) Ser católico, apostólico y romano.</button>
+    </div>
+
+    <h2>2. ¿Qué sucedió con Menem durante la última dictadura militar tras el golpe de 1976?</h2>
+    <div class="opciones-container" data-pregunta="2">
+        <button class="btn-opcion" data-correcta="false">a) Se exilió en la ciudad de Yabrud, Siria.</button>
+        <button class="btn-opcion" data-correcta="true">b) Permaneció varios años privado de su libertad.</button>
+        <button class="btn-opcion" data-correcta="false">c) Fue nombrado interventor federal de La Rioja.</button>
+        <button class="btn-opcion" data-correcta="false">d) Se retiró de la política para dedicarse al comercio.</button>
+    </div>
+
+    <h2>3. ¿Qué cambio introdujo la Reforma Constitucional de 1994 respecto a la fe del máximo mandatario?</h2>
+    <div class="opciones-container" data-pregunta="3">
+        <button class="btn-opcion" data-correcta="true">a) Permitió que cualquier ciudadano ejerza el cargo sin importar su religión.</button>
+        <button class="btn-opcion" data-correcta="false">b) Ratificó que solo los católicos podían ser presidentes.</button>
+        <button class="btn-opcion" data-correcta="false">c) Impuso que el presidente debía ser obligatoriamente abogado.</button>
+        <button class="btn-opcion" data-correcta="false">d) Estableció que el presidente debía ser elegido por la Iglesia.</button>
+    </div>
+
+    <div id="resultado-final">
+        <h3>¡Trivia Completada!</h3>
+        <p id="puntaje-texto"></p>
+    </div>
+
+    <script src="../js/preguntas.js"></script>
+</body>
+</html>
